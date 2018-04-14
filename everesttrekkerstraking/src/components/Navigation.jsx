@@ -29,7 +29,9 @@ const NavigationAuth = () =>
     >
       <ul
         className="navbar-nav mr-auto"
-      >
+
+        >
+
         <li>
           <Link
             className="nav-link"
@@ -46,7 +48,19 @@ const NavigationAuth = () =>
           Account
           </Link>
         </li>
-      </ul>
+      
+
+       <li>
+          <Link
+            className="nav-link"
+            to={routes.TREKKER}
+          >
+         Trekkers Status
+          </Link>
+        </li>
+        </ul>
+
+
       <form
         className="form-inline mt-2 mt-md-0"
       >

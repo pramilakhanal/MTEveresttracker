@@ -4,3 +4,13 @@ h2 {
 	font-color: blue;
 
 }
+
+form.search {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+form.search button[type="submit"] {
+  float: right;
+  margin-top: 10px;
+}

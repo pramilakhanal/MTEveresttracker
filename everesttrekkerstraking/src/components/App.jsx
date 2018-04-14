@@ -11,6 +11,7 @@ import SignUpPage from './SignUp';
 import SignInPage from './SignIn';
 import PasswordForgetPage from './PasswordForget';
 import HomePage from './Home';
+import TrekkerstatusPage from './Trekker';
 import AccountPage from './Account';
 import './App.css';
 
@@ -52,6 +53,12 @@ const App = () =>
               exact
               path={routes.HOME}
               component={() => <HomePage />}
+            />
+            
+            <Route
+              exact
+              path={routes.TREKKER}
+              component={() => <TrekkerstatusPage />}
             />
             <Route
               exact

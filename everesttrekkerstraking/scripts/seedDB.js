@@ -1,0 +1,42 @@
+const mongoose = require("mongoose");
+const db = require("../models");
+mongoose.Promise = global.Promise;
+
+// This file empties the Books collection and inserts the books below
+
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/trecker");
+
+const treckerSeed = [
+{
+  name: "Eric Goldstein",
+  location: {
+  stationOne: {
+    checkedIn: false,
+    checkedOut: false,
+}
+}
+},
+{
+  name: "Pramila Khanal",
+  location: {
+  stationOne: {
+    checkedIn: true,
+    checkedOut: true,
+}
+}
+}
+];
+
+db.Trecker
+  .remove({})
+  .then(() => db.Trecker.insertMany(treckerSeed))
+  .then(data => {
+    console.log('hellow',data);
+    console.log(data.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });

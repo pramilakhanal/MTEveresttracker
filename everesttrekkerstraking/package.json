@@ -2,8 +2,15 @@
   "name": "everesttrekkerstraking",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
     "firebase": "^4.12.1",
+    "mongodb": "^3.0.6",
+    "mongoose": "^5.0.14",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-bootstrap": "^0.32.1",
@@ -15,6 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "seed": "node scripts/seedDB.js"
   }
 }
