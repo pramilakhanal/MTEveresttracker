@@ -54,7 +54,7 @@ class Searchresult extends Component {
           <th scope="row">{index + 1}</th>
           <td>{Object.keys(this.state.data.location)[index]}</td>
           <td>
-          <input type="checkbox" checked={station.checkIn} aria-label="Checkbox for following text input"/>
+          <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
           </td>
           <td>
           <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>

@@ -10,21 +10,18 @@ mongoose.connect(
 const treckerSeed = [
 {
   name: "Eric Goldstein",
-  location: {
-  stationOne: {
-    checkedIn: false,
-    checkedOut: false,
-}
-}
+  
 },
 {
   name: "Pramila Khanal",
-  location: {
-  stationOne: {
-    checkedIn: true,
-    checkedOut: true,
-}
-}
+
+},
+{
+  name: "Jeffrey Phelps",
+
+},
+{
+  name: "Dante Cardenes",
 }
 ];
 

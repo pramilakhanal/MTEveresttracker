@@ -4,64 +4,68 @@ const Schema = mongoose.Schema;
 const TreckerSchema = new Schema({
   name: { type: String, required: true },
   location: { 
-  	stationOne: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationTwo: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationThree: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationFour: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationFive: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationSix: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationSeven: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationEight: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationNine: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationTen: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationEleven: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationTweleve: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationThirteen: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  	stationFourteen: {
-  		checkedIn: false,
-  		checkedOut: false
-  	},
-  },
-}, {collection: 'trecker'});
+    Lukla: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Phakding: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    NamcheBazaar: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Thami: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Khumjung: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Debuche: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Pangboche: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Dingboche: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Lobuje: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    EverestBaseCamp: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    BaseCampOne: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    BaseCampTwo: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    BaseCampThree: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    BaseCampFour: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    Summit: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+  }}, {collection: 'trecker'});
+
 
 const Trecker = mongoose.model("Trecker", TreckerSchema);
 
