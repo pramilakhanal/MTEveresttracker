@@ -29,15 +29,11 @@ class TrekkerstatusPage extends Component {
   };
   
 
-  
-
-  
-
   loadTrecker = (name) => {
     const currentState = this.state;
     API.getTrecker(name)
       .then(data => {
-        this.setState({...currentState, trecker: data.data});
+        this.setState({...currentState, trecker: data.data, foundPerson: true});
       })
       .catch(err => console.log(err));
   };
@@ -64,7 +60,7 @@ class TrekkerstatusPage extends Component {
 
   render() {
     
-
+    
     return (
       
       <div className="container">
@@ -75,15 +71,19 @@ class TrekkerstatusPage extends Component {
           name={this.state.name}
           loadTrecker = {this.loadTrecker}
         />
+
+        <div className={`${this.state.foundPerson ? 'show' : 'hide'}`}>
         <Searchresult trecker = {this.state.trecker} results={this.state.results} />
+        </div>
     </div>
       
 
          );
 
     
-       }
+       
 
+}
 }
 
 export default TrekkerstatusPage;

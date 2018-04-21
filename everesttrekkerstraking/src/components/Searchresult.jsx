@@ -1,14 +1,24 @@
 import React, { Component } from "react";
- import './Searchform.css';
+ import './Searchresult.css';
 import axios from 'axios';
 
 class Searchresult extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null
+      data: {},
+
+
+       descending: false,
+       ascending: true
     }
   }
+  
+   onClick() {
+    const currentState = this.state;
+      const truthiness = currentState.descending ? false : true;
+     this.setState({...currentState, descending: truthiness, ascending: !truthiness});
+   }
 
   componentWillReceiveProps(nextProps) {
     console.log('here are my next props', nextProps.trecker);
@@ -26,7 +36,7 @@ class Searchresult extends Component {
   }
   
   render () {
-    if(this.state.data) {
+    if(this.state.data.location && this.state.ascending) {
   return (
 
   <div>
@@ -58,6 +68,7 @@ class Searchresult extends Component {
           </td>
           <td>
           <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
+        
           </td>
         </tr>
         );
@@ -68,18 +79,88 @@ class Searchresult extends Component {
   </div>
   
 
+  <button onClick={this.onClick.bind(this)} className='btn btn-primary'>{!this.state.descending ? 'Descending' : 'Ascending'}</button>
+
+
+
+
 </div>
 
 
 
 
 )
+
 }
-else {
+        
+   
+     else if
+      (this.state.data.descending && this.state.descending);
+       {
+        
+       // else if
+       //  (this.state.data && this.state.descending) {
+      
   return (
-      <div>Loading.......</div>
-    );
+     <div>
+
+
+ <div className="container">
+
+
+   
+                   
+   <table className="table">
+  
+    <thead>
+        <tr>
+          <th scope="col">Checkpoint</th>
+          <th scope="col">Location</th>
+          <th scope="col">Checkin</th>
+          <th scope="col">Checkout</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+      {this.arrayBuilder(this.state.data.descending).map((station, index) => {
+        return (
+        <tr key={index}>
+          <th scope="row">{index + 1}</th>
+          <td>{Object.keys(this.state.data.descending)[index]}</td>
+          <td>
+          <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
+          </td>
+          <td>
+          <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
+          </td>
+        </tr>
+        );
+      })}
+               
+    </tbody>
+  </table>
+  </div>
+  <button onClick={this.onClick.bind(this)} className="btn btn-primary">{!this.state.descending ? 'Descending' : 'Ascending'}</button>
+
+</div>
+
+  
+
+  
+
+)
+  
+  }
+
+
+
+
 }
-}
+
+
+
+
+
 };
       export default Searchresult;

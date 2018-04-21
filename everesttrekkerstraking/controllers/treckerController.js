@@ -1,5 +1,5 @@
 const db = require("../models");
-
+const ObjectId = require('mongodb').ObjectID;
 
 module.exports = {
   findAll: function(cb, fn) {
@@ -35,10 +35,24 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
+    console.log(' he controllerHere is our body int', req.body);
+    console.log('user id', req.body._id );
     db.Trecker
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
+      .findOneAndUpdate({name: req.body.name}, {$set: {location: req.body.location, descending: req.body.descending}})
+      .then(dbModel => {
+        console.log('dbmodel', dbModel);
+        res.json(dbModel)
+      })
+      .catch(err => res.status(422).json(err));   
+      
+    //  db.Trecker 
+    // .findOneAndUpdate({name: req.body.name}, {$set: {location: req.body.descending}})
+    //   .then(dbModel => {
+    //     console.log('dbmodel', dbModel);
+    //     res.json(dbModel)
+    //   })
+    //   .catch(err => res.status(422).json(err));   
+      
+ },
 
  };

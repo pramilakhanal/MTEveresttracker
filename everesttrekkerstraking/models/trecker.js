@@ -64,7 +64,58 @@ const TreckerSchema = new Schema({
       checkedIn: { type: Boolean, required: true, default: false },
       checkedOut: { type: Boolean, required: true, default: false }
     },
-  }}, {collection: 'trecker'});
+  },
+descending: {
+  
+  Summit: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    BaseCampFour: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    BaseCampThree: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    BaseCampTwo: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+    BaseCampOne: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    EverestBaseCamp: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    Debuche: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    NamcheBazaar: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+    Lukla: {
+      checkedIn: { type: Boolean, required: true, default: false },
+      checkedOut: { type: Boolean, required: true, default: false }
+    },
+
+  },
+
+
+
+}, {collection: 'trecker'});
 
 
 const Trecker = mongoose.model("Trecker", TreckerSchema);
