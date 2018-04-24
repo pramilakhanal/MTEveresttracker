@@ -105,7 +105,7 @@ class TrekkerstatusPage extends Component {
 
         <Col xs={12} sm={12} md={7} lg={7}>
           <br />
-          <div className={`${this.state.foundPerson ? 'show' : 'hide'}`}>
+          <div id="resultsFormDiv" className={`${this.state.foundPerson ? 'show' : 'hide'}`}>
           <Searchresult trecker = {this.state.trecker} results={this.state.results} />
           </div>
         </Col>
