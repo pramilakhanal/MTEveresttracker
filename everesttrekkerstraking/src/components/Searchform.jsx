@@ -41,7 +41,7 @@ class Searchform extends Component {
           placeholder="Name"
           id="name"
         />
-        <button type="button" onClick={this.onSearch.bind(this)} className="btn btn-success">Search</button>
+        <button type="button" id="searchButton" onClick={this.onSearch.bind(this)} className="btn btn-success">Search</button>
       </div>
     </form>
   </div>
