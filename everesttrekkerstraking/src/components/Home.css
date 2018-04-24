@@ -10,7 +10,7 @@
   float: right;
 	padding: 5px;
   margin: 15px;
-  border: 2px solid rgb(50, 50, 50);
+  border: 1px solid rgba(50, 50, 50, .3);
 }
 
 #thumbnail1 img {
@@ -27,7 +27,7 @@
   float: right;
 	padding: 5px;
   margin: 15px;
-  border: 2px solid rgb(50, 50, 50);
+  border: 1px solid rgba(50, 50, 50, .3);
 }
 
 #thumbnail2 img {
