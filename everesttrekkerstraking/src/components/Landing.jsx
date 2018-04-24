@@ -24,7 +24,7 @@ const LandingPage = () =>
         <div id="mainContainer">
           <p id="text1">Welcome to:</p>
           <h1 id="text2">EVEREST<br/>TREKr-TRAKr</h1>
-          <p id="text3">Knowing is half the battle</p>
+          <p id="text3">Knowing is half the battle...</p>
         </div>
       </Col>
       <Col md={12}>
@@ -34,7 +34,7 @@ const LandingPage = () =>
               serious and dangerous endeavours, like scaling Mt. Everest. There doesn't seem to be any 
               app available today that allows for family, friends and other interested parties to track 
               a trekker's progress and whether or not they made it to each checkpoint along the way, 
-              or if they may need to be rescued. We believe that problem is closer than ever to being 
+              or if they may need to be rescued. We believe that problem is now closer than ever to being 
               solved.</p>
       </Col>
     </Row>
