@@ -4,8 +4,8 @@ import {Jumbotron, Grid, Row, Col, Image, Button, Thumbnail } from 'react-bootst
 import API from "../utils/API";
 import Searchform from './Searchform';
 import Searchresult from './Searchresult';
-import './Trekker.css';
 import SimpleMap from './map.js'
+import './Trekker.css';
 
 
 class TrekkerstatusPage extends Component {
@@ -65,12 +65,22 @@ class TrekkerstatusPage extends Component {
     shouldMapShow() {
       if(this.state.trecker) {
         return (
-            <SimpleMap descending = {this.state.descending} ascending = {this.state.ascending} trecker = {this.state.trecker}  />
+            <div id="mapImageDiv">
+              <div id="mapImage">
+                <SimpleMap descending = {this.state.descending} ascending = {this.state.ascending} trecker = {this.state.trecker}  />
+              </div>
+            </div>
           )
       }
       else {
         return(
-        <p></p>
+          <div id="mapThumbnail">
+            <Thumbnail src="http://www.nationalgeographicexpeditions.com/assets/images/8034/master.jpg" >
+              <hr />
+              <h4>Kathmandu - Everest Basecamp</h4>
+              <p>13-Days</p>
+            </Thumbnail>
+          </div>
         )
       }
     }
@@ -95,18 +105,13 @@ class TrekkerstatusPage extends Component {
 
         <Col xs={12} sm={12} md={7} lg={7}>
           <br />
-          
           <div className={`${this.state.foundPerson ? 'show' : 'hide'}`}>
           <Searchresult trecker = {this.state.trecker} results={this.state.results} />
           </div>
         </Col>
 
         <Col xs={12} sm={8} md={5} lg={5}>
-          
-        
-        {this.shouldMapShow()}
-        
-    
+            {this.shouldMapShow()}
         </Col>
 
       </Row>

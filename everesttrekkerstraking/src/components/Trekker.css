@@ -1,20 +1,37 @@
 
 
-#trekkerRow {
-    margin: 0;
-}
-
-#thumbnailDiv {
-    float: none;
-}
-
-#thumbnail5 {
-    width: 100%;
+#mapImageDiv {
+    border: solid 1px rgb(50, 50, 50);
+    margin-top: -150px;
     padding: 5px;
-    margin: 20px 10px;
-    border: 2px solid rgb(50, 50, 50);
+    text-align: center;
 }
 
-#thumbnail5 hr {
+#mapImage {
+    height: 770px;
+    width: 125%;
+}
+
+#mapThumbnail {
+    margin-top: -150px;
+}
+
+#mapThumbnail img {
+    width: 100%;
+}
+
+#mapThumbnail hr {
     margin-top: -1px;
+}
+
+
+
+@media screen and (max-width:991px) {
+    #mapImageDiv {
+        margin-top: 40px;
+    }
+
+    #mapThumbnail {
+        margin-top: 40px;
+    }
 }
