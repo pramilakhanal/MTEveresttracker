@@ -26,8 +26,8 @@ const NavigationAuth = () =>
     <div className="navbar" id="mainNav">
       <p id="logo">TREKr-TRAKr</p>
       <form className="form-inline mt-2 mt-md-0" id="navForm1">
-        <Link className="nav-link" id="homeLink" to={routes.HOME}>Home</Link>
         <Link className="nav-link" id="aboutLink" to={routes.LANDING}>About</Link>
+        <Link className="nav-link" id="homeLink" to={routes.HOME}>TREK Info</Link>
         <Link className="nav-link" id="statusLink" to={routes.TREKKER}>TREKr Status</Link>
       </form>
       <form className="form-inline mt-2 mt-md-0" id="navForm2">
