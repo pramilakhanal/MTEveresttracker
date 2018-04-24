@@ -1,5 +1,6 @@
 import React, { Component } from "react";
- import './Searchresult.css';
+import {Jumbotron, Grid, Row, Col, Image, Button, Thumbnail, Table } from 'react-bootstrap';
+import './Searchresult.css';
 import axios from 'axios';
 
 class Searchresult extends Component {
@@ -39,128 +40,107 @@ class Searchresult extends Component {
     if(this.state.data.location && this.state.ascending) {
   return (
 
-  <div>
+      <div>
 
+        <h3>Name: {this.state.data.name}</h3>
 
-<div className="container">
+        <Table striped bordered hover>
 
+          <thead>
+              <tr>
+                <th scope="col">Checkpoint</th>
+                <th scope="col">Location</th>
+                <th scope="col">Checkin</th>
+                <th scope="col">Checkout</th>
+                <th scope="col">Timestamp</th>
+              </tr>
+          </thead>
 
-  <h3>Name: {this.state.data.name}</h3>
-                   
-  <table className="table">
-  
-    <thead>
-        <tr>
-          <th scope="col">Checkpoint</th>
-          <th scope="col">Location</th>
-          <th scope="col">Checkin</th>
-          <th scope="col">Checkout</th>
-        </tr>
-    </thead>
-    <tbody>
-      {this.arrayBuilder(this.state.data.location).map((station, index) => {
-        return (
-        <tr key={index}>
-          <th scope="row">{index + 1}</th>
-          <td>{Object.keys(this.state.data.location)[index]}</td>
-          <td>
-          <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
-          </td>
-          <td>
-          <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
+          <tbody>
+            {this.arrayBuilder(this.state.data.location).map((station, index) => {
+              return (
+              <tr key={index}>
+                <th scope="row">{index + 1}</th>
+                <td>{Object.keys(this.state.data.location)[index]}</td>
+                <td>
+                <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
+                </td>
+                <td>
+                <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
+                </td>
+                <td></td>
+              </tr>
+              );
+            })}      
+          </tbody>
+
+        </Table>
+
+        <button onClick={this.onClick.bind(this)} className='btn btn-primary'>{!this.state.descending ? 'Descending' : 'Ascending'}</button>
         
-          </td>
-        </tr>
-        );
-      })}
-               
-    </tbody>
-  </table>
-  </div>
-  
+      </div>
 
-  <button onClick={this.onClick.bind(this)} className='btn btn-primary'>{!this.state.descending ? 'Descending' : 'Ascending'}</button>
-
-
-
-
-</div>
-
-
-
-
-)
+  )
 
 }
         
    
-     else if
-      (this.state.data.descending && this.state.descending);
-       {
-        
-       // else if
-       //  (this.state.data && this.state.descending) {
+else if
+(this.state.data.descending && this.state.descending);
+  {
+  
+  // else if
+  //  (this.state.data && this.state.descending) {
       
   return (
-     <div>
+    
+    <div>
 
-
- <div className="container">
-
-
-   
-                   
-   <table className="table">
+      <div>
+         
+        <Table striped bordered hover>
   
-    <thead>
-        <tr>
-          <th scope="col">Checkpoint</th>
-          <th scope="col">Location</th>
-          <th scope="col">Checkin</th>
-          <th scope="col">Checkout</th>
-        </tr>
-    </thead>
+          <thead>
+              <tr>
+                <th scope="col">Checkpoint</th>
+                <th scope="col">Location</th>
+                <th scope="col">Checkin</th>
+                <th scope="col">Checkout</th>
+                <th scope="col">Timestamp</th>
+              </tr>
+          </thead>
 
-    <tbody>
+          <tbody>
+            {this.arrayBuilder(this.state.data.descending).map((station, index) => {
+              return (
+              <tr key={index}>
+                <th scope="row">{index + 1}</th>
+                <td>{Object.keys(this.state.data.descending)[index]}</td>
+                <td>
+                <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
+                </td>
+                <td>
+                <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
+                </td>
+                <td></td>
+              </tr>
+              );
+            })}        
+          </tbody>
 
-      {this.arrayBuilder(this.state.data.descending).map((station, index) => {
-        return (
-        <tr key={index}>
-          <th scope="row">{index + 1}</th>
-          <td>{Object.keys(this.state.data.descending)[index]}</td>
-          <td>
-          <input type="checkbox" checked={station.checkedIn} aria-label="Checkbox for following text input"/>
-          </td>
-          <td>
-          <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
-          </td>
-        </tr>
-        );
-      })}
-               
-    </tbody>
-  </table>
-  </div>
-  <button onClick={this.onClick.bind(this)} className="btn btn-primary">{!this.state.descending ? 'Descending' : 'Ascending'}</button>
+        </Table>
 
-</div>
+      </div>
+      <button onClick={this.onClick.bind(this)} className="btn btn-primary">{!this.state.descending ? 'Descending' : 'Ascending'}</button>
 
-  
+    </div>
 
-  
-
-)
+  )
   
   }
 
-
-
-
 }
 
-
-
-
-
 };
-      export default Searchresult;
+
+export default Searchresult;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
+import {Jumbotron, Grid, Row, Col, Image, Button, Thumbnail } from 'react-bootstrap';
 import API from "../utils/API";
 import Searchform from './Searchform';
 import Searchresult from './Searchresult';
@@ -63,22 +63,39 @@ class TrekkerstatusPage extends Component {
     
     return (
       
-      <div className="container">
-                     
-      <Searchform
-          handleFormSubmit={this.handleFormSubmit}
-          handleInputChange={this.handleInputChange}
-          name={this.state.name}
-          loadTrecker = {this.loadTrecker}
-        />
+      <Row id="trekkerRow">
 
-        <div className={`${this.state.foundPerson ? 'show' : 'hide'}`}>
-        <Searchresult trecker = {this.state.trecker} results={this.state.results} />
-        </div>
-    </div>
+        <Col xs={12} sm={12} md={7} lg={7}>
+          <div id="searchFormDiv">
+            <Searchform
+              handleFormSubmit={this.handleFormSubmit}
+              handleInputChange={this.handleInputChange}
+              name={this.state.name}
+              loadTrecker = {this.loadTrecker}
+            />
+          </div>
+        </Col>
+
+        <Col xs={12} sm={12} md={7} lg={7}>
+          <br />
+          <Searchresult trecker = {this.state.trecker} results={this.state.results} />
+          <hr />
+        </Col>
+
+        <Col xs={12} sm={8} md={5} lg={5}>
+          <div id="thumbnailDiv">
+            <Thumbnail id="thumbnail5" src="https://i.pinimg.com/originals/63/b3/f7/63b3f783ea47c87722082d03130e9967.jpg" alt="242x200">
+              <hr/>
+              <h3>Geo-Locator: ENABLED</h3>
+              <p>TREKr currently being TRAKd</p>
+            </Thumbnail>
+          </div>
+        </Col>
+
+      </Row>
       
 
-         );
+    );
 
     
        

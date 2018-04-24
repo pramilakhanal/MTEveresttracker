@@ -1,6 +1,6 @@
 
 
-#mainDiv2 {
+#mainDiv3 {
     height: 700px;
     background-image: url("https://mountaintrip.com/wp-content/uploads/2016/05/DSC_3374.jpg");
     background-size: auto 100%;
@@ -9,13 +9,21 @@
     background-attachment: fixed;
 }
 
-#formDiv2 {
+#formDiv3 {
     width: 300px;
     background-color: rgba(144, 238, 144, .5);
     padding: 20px;
     height: 100%;
 }
 
-#formDiv2 h1 {
+#formDiv3 h3 {
+    color: white;
+}
+
+#formDiv3 h4 {
+    color: white;
+}
+
+h4 small {
     color: white;
 }

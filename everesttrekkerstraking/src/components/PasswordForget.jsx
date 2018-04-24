@@ -1,15 +1,26 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import {Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import { auth } from '../firebase';
 import * as routes from '../constants/routes';
 
+import './PasswordForget.css';
+
 const PasswordForgetPage = () =>
   (
-    <div className="container">
-      <h1>Password Forget</h1>
-      <PasswordForgetForm />
-    </div>
+    <Row>
+      <Col md={12}>
+        <div id="mainDiv4">
+          <div id="formDiv4">
+            <h2>Reset Password</h2>
+            <br /><br />
+            <div>
+              <PasswordForgetForm />
+            </div>
+          </div>
+        </div>
+      </Col>
+    </Row>
   );
 
 const byPropKey = (propertyName, value) => () => ({
@@ -67,8 +78,8 @@ class PasswordForgetForm extends Component {
         </div>
         <div className="form-group row">
           <div className="col-sm-10">
-            <button disabled={isInvalid} className="btn btn-primary" type="submit">
-              Reset My Password
+            <button disabled={isInvalid} className="btn btn-default" type="submit">
+              Reset Password
             </button>
           </div>
         </div>
@@ -82,10 +93,8 @@ class PasswordForgetForm extends Component {
 const PasswordForgetLink = () =>
   (
     <p>
-      <Link
-        to={routes.PASSWORD_FORGET}
-      >
-        Forgot Password
+      <Link id="pwForgetLink" to={routes.PASSWORD_FORGET}>
+        Forgot Password?
       </Link>
     </p>
   );

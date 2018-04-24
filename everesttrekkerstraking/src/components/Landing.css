@@ -1,6 +1,45 @@
 
-h1 {
 
-   font-color: green;
-   
+
+ #mainContainer {
+    background-color: #FFF;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    height: 500px;
+    text-align: center;
+    color: black;
+ }
+
+#text1 {
+    padding: 50px 0;
+    font-size: 30px;
+    color: #fff;
+    font-family: 'Oxygen', sans-serif;
+}
+
+#text2 {
+    background-color: rgba(255, 255, 255, .3);
+    color: rgb(50, 50, 50);
+    font-weight: bolder;
+    font-size: 90px;
+    font-family: 'Russo One', sans-serif;
+}
+
+#text3 {
+    background-color: rgba(255, 255, 255, .4);
+    color: rgb(0, 0, 0);
+    font-family: serif;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: -10px;
+}
+
+#text4 {
+    padding: 20px;
+    font-weight: bold;
+    border: 5px solid rgb(50, 50, 50);
+    margin: 10px 0;
 }

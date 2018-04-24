@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-
+import {Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import './signin.css';
 import { SignUpLink } from './SignUp';
 import { PasswordForgetLink } from './PasswordForget';
@@ -9,12 +9,20 @@ import * as routes from '../constants/routes';
 
 const SignInPage = ({ history }) =>
   (
-    <div className="container">
-      <h1>Sign In</h1>
-      <SignInForm history={history} />
-      <PasswordForgetLink />
-      <SignUpLink />
-    </div>
+    <Row>
+      <Col md={12}>
+        <div id="mainDiv2">
+          <div id="formDiv2">
+            <h1>Sign In</h1>
+            <br/>
+            <SignInForm history={history} />
+            <PasswordForgetLink />
+            <br/>
+            <SignUpLink />
+          </div>
+        </div>
+      </Col>
+    </Row>
   );
 
 const byPropKey = (propertyName, value) => () => ({
@@ -96,7 +104,7 @@ class SignInForm extends Component {
         </div>
         <div className="form-group row">
           <div className="col-sm-10">
-            <button disabled={isInvalid} className="btn btn-primary" type="submit">
+            <button disabled={isInvalid} className="btn btn-default" type="submit">
               Sign In
             </button>
           </div>

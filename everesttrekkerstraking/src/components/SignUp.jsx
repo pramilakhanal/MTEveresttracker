@@ -4,16 +4,27 @@ import {
   withRouter,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import {Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import { auth, db } from '../firebase';
 import * as routes from '../constants/routes';
+import './SignUp.css';
 
 const SignUpPage = ({ history }) =>
   (
-    <div className="container">
-      <h1>Sign Up</h1>
-      <SignUpForm history={history} />
-    </div>
+    <Row>
+      <Col md={12}>
+        <div id="mainDiv1">
+          <div id="formDiv1">
+            <h1>Create an Account</h1>
+            <span id="formSpan1"><SignUpForm history={history} /></span>
+            <br/>
+            <p id="linkText1">Already have an account?
+              <Link className="nav-link" id="signInLink2" to={routes.SIGN_IN}> Sign In</Link>
+            </p>
+          </div>
+        </div>
+      </Col>
+    </Row>
   );
 
 SignUpPage.propTypes = {
@@ -136,7 +147,7 @@ class SignUpForm extends Component {
         </div>
         <div className="form-group row">
           <div className="col-sm-10">
-            <button disabled={isInvalid} className="btn btn-primary" type="submit">
+            <button disabled={isInvalid} className="btn btn-default" type="submit">
               Sign Up
             </button>
           </div>
@@ -150,10 +161,10 @@ class SignUpForm extends Component {
 
 const SignUpLink = () =>
   (
-    <p>
+    <p id="accountQuestion">
       {" Don't have an account? "}
       {' '}
-      <Link to={routes.SIGN_UP}>Sign Up</Link>
+      <Link id="signUpLink1" to={routes.SIGN_UP}>Sign Up!</Link>
     </p>
   );
 

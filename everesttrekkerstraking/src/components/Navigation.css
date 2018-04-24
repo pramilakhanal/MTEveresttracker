@@ -1,5 +1,105 @@
-#navbarCollapse.collapse.navbar-collapse {
 
-	margin-bottom: 20px;
+
+body {
+	min-width: 550px;
+}
+
+#mainNav {
+	background-color: rgb(50, 50, 50);
+	height: 70px;
+	width: 100%;
+	margin-top: -30px;
+	display: block;
+}
+
+#logo {
+	color: lightgreen;
+	font-size: 28px;
+	font-weight: bolder;
+	float: left;
+	padding: 15px 50px 0 50px;
+}
+
+#navForm1 {
+	float: left;
+	padding-top: 23px;
+	margin-left: 30px;
+}
+
+#navForm2 {
+	float: right;
+	padding: 23px;
+}
+
+#homeLink {
+	color: white;
+	font-size: 18px;
+}
+#homeLink:hover {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+#aboutLink {
+	color: white;
+	font-size: 18px;
+	margin-left: 30px;
+}
+#aboutLink:hover {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+#statusLink {
+	color: white;
+	font-size: 18px;
+	margin-left: 30px;
+}
+#statusLink:hover {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+#accountLink {
+	color: white;
+	margin-right: 30px;
+	font-size: 18px;
+}
+#accountLink:hover {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+#signInLink {
+	color: white;
+	font-size: 18px;
+	margin-left: 30px;
+}
+#signInLink:hover {
+	color: antiquewhite;
+	text-decoration: none;
+}
+
+
+
+@media screen and (max-width:820px) {
+	#mainNav {
+		height: 110px;
+		display: show;
+	}
+
+	#logo {
+		float: none;
+		margin-bottom: -20px;
+	}
+
+	#navForm1 {
+		float: left;
+		margin-left: 20px;
+	}
+
+	#navForm2 {
+		float: right;
+	}
 }
 

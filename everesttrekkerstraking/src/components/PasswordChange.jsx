@@ -71,7 +71,7 @@ class PasswordChangeForm extends Component {
         </div>
         <div className="form-group row">
           <div className="col-sm-10">
-            <button disabled={isInvalid} className="btn btn-primary" type="submit">
+            <button disabled={isInvalid} className="btn btn-default" type="submit">
               Reset My Password
             </button>
           </div>

@@ -23,30 +23,28 @@ class Searchform extends Component {
 
  <div className="Trekerssearch container">
       <div className="col-9">
-        <h1>check the status of your loved Ones!!</h1>
+        <h1>TREKr Status</h1>
           
       </div>
 
  <div className="col-6">
-          <form className="search">
-            <div className="form-group">
-                <label htmlFor="name">Enter TreKkers Name:</label>
-                    <input 
-                        value={this.state.searchField}
-                        onChange={this.onType.bind(this)}
-                        name="name"
-                        list="name"
-                        type="text"
-                        className="form-control"
-                       placeholder="Name"
-                       id="name"
-                     />
-                
-
-            <button type="button" onClick={this.onSearch.bind(this)} className="btn btn-success">Search</button>
-          </div>
-        </form>
+    <form id="searchForm1" className="search">
+      <div className="form-group">
+        <label htmlFor="name">Search Trekkers:</label>
+        <input 
+          value={this.state.searchField}
+          onChange={this.onType.bind(this)}
+          name="name"
+          list="name"
+          type="text"
+          className="form-control"
+          placeholder="Name"
+          id="name"
+        />
+        <button type="button" onClick={this.onSearch.bind(this)} className="btn btn-success">Search</button>
       </div>
+    </form>
+  </div>
       </div>
 
 );
