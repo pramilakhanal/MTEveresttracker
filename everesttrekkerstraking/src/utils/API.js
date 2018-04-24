@@ -7,7 +7,7 @@ export default {
   },
   // Gets the trecker with the given id
   getTrecker: function(name) {
-    return axios.get("http://localhost:3001/api/trecker/" + name);
+    return axios.get("/api/trecker/" + name);
   },
   
   
