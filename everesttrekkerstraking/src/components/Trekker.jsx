@@ -5,7 +5,7 @@ import API from "../utils/API";
 import Searchform from './Searchform';
 import Searchresult from './Searchresult';
 import './Trekker.css';
-
+import SimpleMap from './map.js'
 
 
 class TrekkerstatusPage extends Component {
@@ -15,20 +15,26 @@ class TrekkerstatusPage extends Component {
   
 
   this.state = {
-      search: "",
+     search: "",
       name: [],
       location: [],
       checkin: [],
       checkout: [],
       error: "",
       foundPerson: null,
-      trecker: null
-  
+      trecker: null,
+      descending: false,
+      ascending: true
+
     };
     this.loadTrecker = this.loadTrecker.bind(this);
   };
   
-
+   changeAscendDescend() {
+     const currentState = this.state;
+      const truthiness = currentState.descending ? false : true;
+     this.setState({...currentState, descending: truthiness, ascending: !truthiness});
+  }
   loadTrecker = (name) => {
     const currentState = this.state;
     API.getTrecker(name)
@@ -56,7 +62,18 @@ class TrekkerstatusPage extends Component {
         .catch(err => console.log(err));
     };
  
-
+    shouldMapShow() {
+      if(this.state.trecker) {
+        return (
+            <SimpleMap descending = {this.state.descending} ascending = {this.state.ascending} trecker = {this.state.trecker}  />
+          )
+      }
+      else {
+        return(
+        <p></p>
+        )
+      }
+    }
 
   render() {
     
@@ -85,13 +102,11 @@ class TrekkerstatusPage extends Component {
         </Col>
 
         <Col xs={12} sm={8} md={5} lg={5}>
-          <div id="thumbnailDiv">
-            <Thumbnail id="thumbnail5" src="https://i.pinimg.com/originals/63/b3/f7/63b3f783ea47c87722082d03130e9967.jpg" alt="242x200">
-              <hr/>
-              <h3>Geo-Locator: ENABLED</h3>
-              <p>TREKr currently being TRAKd</p>
-            </Thumbnail>
-          </div>
+          
+        
+        {this.shouldMapShow()}
+        
+    
         </Col>
 
       </Row>

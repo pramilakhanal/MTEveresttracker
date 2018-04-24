@@ -2,6 +2,21 @@ import React from 'react';
 import {Jumbotron, Grid, Row, Col, Image, Button } from 'react-bootstrap';
 import './Landing.css';
 
+window.confirm("We would like to confirm your location");
+{
+  if (true == navigator.geolocation)
+  {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+  else { 
+        console.log(navigator.geolocation.getCurrentPosition(showPosition));
+    }
+}
+function showPosition(position) {
+    console.log("Latitude: " + position.coords.latitude + "  " +
+    "Longitude: " + position.coords.longitude);
+}
+
 const LandingPage = () =>
   (
     <Row>
