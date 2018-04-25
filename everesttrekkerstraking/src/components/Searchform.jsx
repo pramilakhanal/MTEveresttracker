@@ -22,10 +22,9 @@ class Searchform extends Component {
   return (
 
  <div className="Trekerssearch container">
-      <div className="col-9">
-        <h1>TREKr Status</h1>
-          
-      </div>
+    <div className="col-9">
+      <h1>TREKr Status</h1> 
+    </div>
 
  <div className="col-6">
     <form id="searchForm1" className="search">

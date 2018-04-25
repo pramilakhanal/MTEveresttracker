@@ -104,7 +104,6 @@ else if
                 <th scope="col">Location</th>
                 <th scope="col">Checkin</th>
                 <th scope="col">Checkout</th>
-                <th scope="col">Timestamp</th>
               </tr>
           </thead>
 
@@ -120,7 +119,6 @@ else if
                 <td>
                 <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
                 </td>
-                <td></td>
               </tr>
               );
             })}        
