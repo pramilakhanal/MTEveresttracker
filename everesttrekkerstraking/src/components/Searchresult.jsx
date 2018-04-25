@@ -52,7 +52,6 @@ class Searchresult extends Component {
                 <th scope="col">Location</th>
                 <th scope="col">Checkin</th>
                 <th scope="col">Checkout</th>
-                <th scope="col">Timestamp</th>
               </tr>
           </thead>
 
@@ -68,7 +67,6 @@ class Searchresult extends Component {
                 <td>
                 <input type="checkbox" checked={station.checkedOut}  aria-label="Checkbox for following text input"/>
                 </td>
-                <td></td>
               </tr>
               );
             })}      
