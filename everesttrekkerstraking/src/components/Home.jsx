@@ -15,13 +15,13 @@ const HomePage = () =>
 
             <Thumbnail id="thumbnail1" src="http://www.nationalgeographicexpeditions.com/assets/images/8034/master.jpg" >
               <hr />
-              <h4>Lukla - Basecamp</h4>
+              <h4>Kathmandu - Everest Basecamp</h4>
               <p>13-Days</p>
             </Thumbnail>
             
-            <h2>Itinerary - 19 Days</h2>
+            <h2>TREK Info</h2>
             <br/>
-            <h3>PHASE 1 - To Base Camp</h3>
+            <h3>PHASE 1 - To Everest Base Camp</h3>
             <h4>Days 1 & 2 — Kathmandu, Nepal</h4>
             <p>Arrive in Kathmandu and transfer to our hotel, where we’ll gather for an orientation. Spend the following day discovering medieval Kathmandu. Venture into Pashupatinath and visit Nepal’s largest Buddhist stupa, the Bodhnath Stupa, both part of UNESCO’s World Heritage site.
             Shangri-La Hotel Kathmandu (Day 1: D; Day 2: B)</p>
@@ -70,7 +70,7 @@ const HomePage = () =>
 
             <Thumbnail id="thumbnail2" src="https://i.pinimg.com/originals/63/b3/f7/63b3f783ea47c87722082d03130e9967.jpg" >
               <hr />
-              <h4>Basecamp - Summit</h4>
+              <h4>Everest Basecamp - Summit - Return</h4>
               <p>North Face 38-Days</p>
             </Thumbnail>
             
@@ -107,7 +107,7 @@ const HomePage = () =>
 
             <Thumbnail id="thumbnail2" src="http://www.ropeaccesscontractors.com/wp-content/uploads/2014/11/Everest-route-map.jpg" >
               <hr />
-              <h4>Basecamp - Summit</h4>
+              <h4>Everest Basecamp - Summit - Return</h4>
               <p>South Face 34-Days</p>
             </Thumbnail>
 
@@ -152,7 +152,7 @@ const HomePage = () =>
 
             <Thumbnail id="thumbnail2" src="http://www.nationalgeographicexpeditions.com/assets/images/8034/master.jpg" >
               <hr />
-              <h4>Basecamp - Return</h4>
+              <h4>Everest Basecamp - Return</h4>
               <p>North Face 7-Days</p>
             </Thumbnail>
             

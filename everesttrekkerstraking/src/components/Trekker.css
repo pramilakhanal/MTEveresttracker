@@ -25,6 +25,7 @@
 #mapThumbnail {
     margin-top: -190px;
     margin-left: -10px;
+    background-color: rgba(200, 200, 200, .3);
 }
 
 #mapThumbnail img {
