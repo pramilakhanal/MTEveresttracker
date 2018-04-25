@@ -20,7 +20,6 @@ const HomePage = () =>
             </Thumbnail>
             
             <h2>TREK Info</h2>
-            <br/>
             <h3>PHASE 1 - To Everest Base Camp</h3>
             <h4>Days 1 & 2 — Kathmandu, Nepal</h4>
             <p>Arrive in Kathmandu and transfer to our hotel, where we’ll gather for an orientation. Spend the following day discovering medieval Kathmandu. Venture into Pashupatinath and visit Nepal’s largest Buddhist stupa, the Bodhnath Stupa, both part of UNESCO’s World Heritage site.
