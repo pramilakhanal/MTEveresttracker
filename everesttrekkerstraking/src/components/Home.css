@@ -49,3 +49,20 @@ h3 {
 p {
 	color: black;
 }
+
+#trekInfoPageTitle {
+  font-weight: bold;
+}
+#trekInfoPageTitleSub {
+  font-weight: bold;
+}
+
+#phase1Title {
+  margin-bottom: 30px;
+}
+#phase2Title {
+  margin-bottom: 30px;
+}
+#phase3Title {
+  margin-bottom: 30px;
+}
