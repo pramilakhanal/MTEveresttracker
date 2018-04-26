@@ -19,7 +19,9 @@ routes(app);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 
-
+app.get('/', (req, res) => {
+	res.sendFile('build/index.html');
+});
 mongoose.connect(
   "mongodb://heroku_8xc08xkz:project3@ds259109.mlab.com:59109/heroku_8xc08xkz" || "mongodb://localhost/trecker"),
   // {
