@@ -5,7 +5,7 @@ mongoose.Promise = global.Promise;
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/trecker");
+  "mongodb://heroku_8xc08xkz:project3@ds259109.mlab.com:59109/heroku_8xc08xkz" || "mongodb://localhost/trecker");
 
 const treckerSeed = [
 {
