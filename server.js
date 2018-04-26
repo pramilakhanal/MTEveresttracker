@@ -18,8 +18,10 @@ routes(app);
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
+
+
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/trecker"),
+  "mongodb://heroku_8xc08xkz:project3@ds259109.mlab.com:59109/heroku_8xc08xkz" || "mongodb://localhost/trecker"),
   // {
   //   // useMongoClient: true
   // }
