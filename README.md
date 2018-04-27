@@ -68,7 +68,6 @@ See app: https://everest-trakkers-tracking.herokuapp.com/
 - Start node server.js in the project folder, from yet another terminal. (Must have Node.js installed.)
 - Open localhost:3000 in browser.
 - Search with one of the developers names on the TREKr Status page.
-
 ```
 
 ## Developers
