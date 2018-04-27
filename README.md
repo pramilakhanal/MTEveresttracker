@@ -1,3 +1,88 @@
+
+
+
+
+# TREKr-TRAKr - Everest Hiker/Climber Tracking Application
+
+This app was created during mod-20 of the DU web dev bootcap 2017/2018. It is a full-stack, hiker/climber tracking application built with React, Express, MongoDB, Firebase, React-Bootstrap, and Google-Map-React.
+
+## Live Site Link
+See app: https://everest-trakkers-tracking.herokuapp.com/
+
+---
+
+## Screen Shots
+
+### Landing Page
+![Screen shot1](public/images/README1.png)
+
+### Login Page
+![Screen shot2](public/images/README2.png)
+
+### Sign Up Page
+![Screen shot3](public/images/README3.png)
+
+### TREK Info
+![Screen shot4](public/images/README4.png)
+
+### TREKr Status
+![Screen shot5](public/images/README5.png)
+
+### Change Password Page
+![Screen shot5](public/images/README6.png)
+
+---
+
+## Technologies used
+- React - https://reactjs.org/
+- Node - https://nodejs.org/en/
+- Express - https://expressjs.com/
+- Firebase - https://firebase.google.com/
+- MongoDB - https://www.mongodb.com/
+- Heroku - https://www.heroku.com/
+
+- Axios NPM Package - https://www.npmjs.com/package/axios
+- Body-Parser NPM Package - https://www.npmjs.com/package/body-parser
+- Cors NPM Package - https://www.npmjs.com/package/cors
+- Express NPM Package - https://www.npmjs.com/package/express
+- Firebase NPM Package - https://www.npmjs.com/package/firebase
+- Google Map React NPM Package - https://www.npmjs.com/package/google-map-react
+- MongoDB NPM Package - https://www.npmjs.com/package/mongodb
+- Mongoose NPM Package - https://www.npmjs.com/package/mongoose
+- Prop-Types NPM Package - https://www.npmjs.com/package/prop-types
+- React NPM Package - https://www.npmjs.com/package/react
+- React Bootstrap NPM Package - https://www.npmjs.com/package/react-bootstrap
+- React-Dom NPM Package - https://www.npmjs.com/package/react-dom
+- React-Router-Dom NPM Package - https://www.npmjs.com/package/react-router-dom
+- React-Scripts NPM Package - https://www.npmjs.com/package/react-scripts
+
+---
+
+### Prerequisites
+
+```
+- Clone Repo to your machine.
+- Do a Yarn, or NPM install in the project (MTEVERESTTRACKER) folder. (Must have Yarn, or NPM installed.)
+- Start Mongod and Mongo engines in seperate terminals. (Must have MongoDB installed.)
+- Do a Yarn or NPM start in the project folder, from another terminal.
+- Start node server.js in the project folder, from yet another terminal. (Must have Node.js installed.)
+- Open localhost:3000 in browser.
+
+```
+
+## Developers
+
+* **Pramila Khanal** - [Pramila Khanal](https://github.com/pramilakhanal)
+* **Eric Goldstein** - [Eric Goldstein](https://github.com/ericgoldstein)
+* **Jeffrey Phelps** - [Jeffrey Phelps](https://github.com/JeffreyPhelps)
+* **Dante Cardenas** - [Dante Cardenas](https://github.com/DanteCardenas)
+
+---
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
